@@ -27,8 +27,13 @@ require("lazy").setup({
         dependencies = "nvim-lua/plenary.nvim",
         config = true,
         keys = { -- load the plugin only when using it's keybinding:
-            { "<leader>uu", "<cmd>lua require('undotree').toggle()<cr>" },
+            { "<leader>uu", "<cmd>lua require('undotree').toggle()<cr>" }},
     },
+    {
+        "iamcco/markdown-preview.nvim",
+        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+        ft = { "markdown" },
+        build = function() vim.fn["mkdp#util#install"]() end,
     }
   },
   defaults = {
