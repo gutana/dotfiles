@@ -14,3 +14,4 @@ I like to keep all of my dotfiles all here, so we need to create some symlinks t
 
 `ln -s ~/dotfiles/nvim ~/.config/nvim`
 
+Lastly, you'll want to change some things in ~/.zshrc, such as your PATH variable. 
